@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Dumping Service</title>
+    <link rel="stylesheet" href="opa.css"> <!-- Ссылка на ваш CSS-файл -->
+    <style>
+        /* Встроенные стили */
+        /* Если нужны какие-то дополнительные стили только для этой страницы, добавьте их здесь */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Price Dumping Service</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Price Dumping Service</h2>
+        <p>Find the lowest prices for your favorite products!</p>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <ul>
+            <li>Product 1 - $10</li>
+            <li>Product 2 - $15</li>
+            <li>Product 3 - $20</li>
+        </ul>
+        <button onclick="checkPrices()">Check Prices</button> <!-- Добавленная кнопка для вызова функции -->
+        <div id="pricesResult"></div> <!-- Див для отображения результатов -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, please contact us at:</p>
+        <address>
+            Email: info@pricedumping.com<br>
+            Phone: 123-456-7890
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Price Dumping Service. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function checkPrices() {
+            fetch('/get_funpay_prices')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("pricesResult").innerText = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
+</html>
