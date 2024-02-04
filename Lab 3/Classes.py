@@ -2,16 +2,16 @@ import math
 #1
 class Myclass:
     def __init__(self):
-        self.string
+        self.string = ""
     def GetString(self):
-        self.string = intput()
+        self.string = input()
     def PrintString(self):
         self.string = print(self.string.upper())
 x = Myclass()
 x.GetString()
 x.PrintString()
 
-#2
+2
 class Shape:
     def area(self) -> None:
         self.a = 0
