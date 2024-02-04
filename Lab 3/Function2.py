@@ -78,21 +78,21 @@ movies = [
 }
 ]
 #1
-# from movies import movies
-# def first(mov):
-#     mo = input()
-#     for i in mov:
-#         if i["name"] == x and i["imdb"] > 5.5:
-#             print(True)
-# first(movies)
+from movies import movies
+def first(mov):
+    mo = input()
+    for i in mov:
+        if i["name"] == x and i["imdb"] > 5.5:
+            print(True)
+first(movies)
 
 #2
-# def second(mlist = []):
-#     for i in movies:
-#         if i["imdb"] > 5.5:
-#             mlist.append(i)
-#     return mlist
-# print(second())
+def second(mlist = []):
+    for i in movies:
+        if i["imdb"] > 5.5:
+            mlist.append(i)
+    return mlist
+print(second())
 
 #3
 def third(cname = input()):
@@ -102,3 +102,29 @@ def third(cname = input()):
             mlist.append(i["name"])
     return mlist
 print(third())
+
+#4
+def fourth(movies):
+    score = 0
+    nmov = len(movies)
+    for i in movies:
+        score +=i["imdb"]
+    if nmov > 0:
+        return score / nmov
+    else:
+        return 0
+print(fourth(movies))
+
+#5
+def fifth(cname = input()):
+    score = 0
+    nmov = 0
+    for i in movies:
+        if i["category"] == cname:
+            score = score + i["imdb"]
+            nmov+=1 
+    if nmov > 0:
+        return score / nmov
+    else:
+        return 0
+print(fifth())
