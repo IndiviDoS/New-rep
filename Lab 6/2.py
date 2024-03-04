@@ -1,18 +1,18 @@
 import os
 #1
-path = '/Users/nurgissa/Desktop/D/pp2/Lab1'
+path = 'C:\Users\yerda\OneDrive\Документы\Я\pyhton\Lab 5'
 dirs = os.listdir(path)
 print(f'folders and files in path - "{path}":\n', dirs)
 
 #2
-path='/Users/nurgissa/Desktop/D/pp2/Lab1'
+path='C:\Users\yerda\OneDrive\Документы\Я\pyhton\Lab 5'
 print('Exists:', os.access(path, os.F_OK))
 print('Access to read:', os.access(path, os.R_OK))
 print('Access to write:', os.access(path, os.W_OK))
 print('Can be executed:', os.access(path, os.X_OK))
 
 #3
-path = '/Users/nurgissa/Desktop/D/pp2/Lab1/Syntax.py'
+path = 'C:\Users\yerda\OneDrive\Документы\Я\pyhton\Lab 5'
 if os.path.exists(path):
     print('Path exists')
     print('Filename:', os.path.basename(path))
@@ -38,7 +38,7 @@ for letter in string.ascii_uppercase:
         pass
 
 #7
-with open('ex4.txt', 'r') as file:
+with open('ex6.txt', 'r') as file:
     data = file.read()
 with open(r'ex7.txt', 'w') as file:
     file.write(data)
@@ -46,7 +46,7 @@ with open(r'ex7.txt', 'w') as file:
 #8
 with open('ex8.txt', 'w') as file:
     pass
-path = '/Users/nurgissa/Desktop/D/pp2/Lab6/ex8.txt'
+path = 'C:\Users\yerda\OneDrive\Документы\Я\pyhton\Lab 6'
 name = os.path.basename(path)
 
 if os.path.exists(path):
