@@ -1,6 +1,6 @@
 #1 
 def generate(n): 
-    for i in range(n+1): 
+    for i in range(1,n+1): 
         yield pow(i, 2) 
 n = int(input())         
 at = generate(n) 
@@ -26,17 +26,14 @@ n = int(input())
 a = divided_3_4(n) 
 for j in divided_3_4(n): 
     print(next(a), end = " ") 
-    
+
 #4 
 def square(a, b): 
     for i in range(a, b): 
         yield pow(i, 2) 
-
 a = int(input()) 
 b = int(input()) 
-
 q = square(a, b) 
-
 for j in square(a, b): 
     print(next(q), end = " ") 
 

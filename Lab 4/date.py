@@ -3,15 +3,17 @@ import datetime
 x = datetime.datetime.now() 
 print(f"{x.year}.{x.month}.{x.day-5} {x.hour}:{x.minute}:{x.second}") 
 
-#2 
-import datetime 
-x = datetime.datetime.now() 
-print(f"{x.year}.{x.month}.{x.day+1} {x.hour}:{x.minute}:{x.second}") 
+#2
+import datetime
+x = datetime.datetime.now()
+print(f"{x.year}.{x.month}.{x.day-1}")
+print(f"{x.year}.{x.month}.{x.day}")
+print(f"{x.year}.{x.month}.{x.day+1}")
 
-#3 
-import datetime 
-x = datetime.datetime.now() 
-print(f"{x.year}.{x.month}.{x.day} {x.hour}:{x.minute}:{x.second}  {x.strftime("%f")}") 
+#3
+import datetime
+x = datetime.datetime.now()
+print(f"{x.strftime("%Y.%m.%d %H:%M:%S")}")
 
 #4 
 import datetime 

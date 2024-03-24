@@ -4,7 +4,7 @@ with open("sample_data.json", "r") as my_file:
 data = json.loads(json_string) 
 interfaces = data.get('imdata', []) 
 print("Interface Status") 
-print("=" * 80) 
+print("=" * 78) 
 print("{:<50} {:<20} {:<8} {:<6}".format("DN", "Description", "Speed", "MTU")) 
 print("-" * 50, "-" * 20, "-" * 8, "-" * 6) 
 for i in interfaces: 
